@@ -1,0 +1,29 @@
+Passed. Processing time: 2 ms. Total amount of side rotations: 210. Total amount of cube rotations: 59.
+Passed. Processing time: 2 ms. Total amount of side rotations: 222. Total amount of cube rotations: 70.
+Passed. Processing time: 2 ms. Total amount of side rotations: 191. Total amount of cube rotations: 70.
+Passed. Processing time: 2 ms. Total amount of side rotations: 435. Total amount of cube rotations: 63.
+Passed. Processing time: 2 ms. Total amount of side rotations: 204. Total amount of cube rotations: 63.
+Passed, Incorrect.
+Passed. Processing time: 3 ms. Total amount of side rotations: 440. Total amount of cube rotations: 68.
+Passed. Processing time: 1 ms. Total amount of side rotations: 181. Total amount of cube rotations: 45.
+Passed. Processing time: 1 ms. Total amount of side rotations: 455. Total amount of cube rotations: 56.
+Passed. Processing time: 2 ms. Total amount of side rotations: 225. Total amount of cube rotations: 67.
+Passed. Processing time: 1 ms. Total amount of side rotations: 226. Total amount of cube rotations: 56.
+Passed, Incorrect.
+Passed. Processing time: 2 ms. Total amount of side rotations: 226. Total amount of cube rotations: 70.
+Passed. Processing time: 2 ms. Total amount of side rotations: 323. Total amount of cube rotations: 68.
+Passed. Processing time: 1 ms. Total amount of side rotations: 170. Total amount of cube rotations: 65.
+Passed. Processing time: 2 ms. Total amount of side rotations: 280. Total amount of cube rotations: 62.
+Passed. Processing time: 1 ms. Total amount of side rotations: 184. Total amount of cube rotations: 59.
+Passed. Processing time: 2 ms. Total amount of side rotations: 244. Total amount of cube rotations: 61.
+Passed. Processing time: 2 ms. Total amount of side rotations: 236. Total amount of cube rotations: 63.
+Passed. Processing time: 1 ms. Total amount of side rotations: 206. Total amount of cube rotations: 64.
+Passed. Processing time: 2 ms. Total amount of side rotations: 264. Total amount of cube rotations: 69.
+Passed. Processing time: 2 ms. Total amount of side rotations: 474. Total amount of cube rotations: 66.
+Passed. Processing time: 1 ms. Total amount of side rotations: 238. Total amount of cube rotations: 61.
+Passed. Processing time: 1 ms. Total amount of side rotations: 214. Total amount of cube rotations: 68.
+Passed. Processing time: 2 ms. Total amount of side rotations: 212. Total amount of cube rotations: 56.
+Passed. Processing time: 3 ms. Total amount of side rotations: 258. Total amount of cube rotations: 77.
+
+Passed: 26. Failed: 0.
+Everything works.
