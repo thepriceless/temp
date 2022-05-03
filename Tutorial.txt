@@ -1,0 +1,17 @@
+Random_Generate() generates a valid cube;
+Rotate_Myself() makes it possible to input commands (RLFBUP, R'L'F'B'U'P', R2L2F2B2U2P2) that can change the state of the cube; command "stop" finishes this function;
+
+Cout() prints the state of a cube into the console;
+Fout() prints the state of a cube into the file;
+Read_From_File() gets the state of the cube from a file;
+
+Solve() solves the cube;
+Shake() shakes the cube quite randomly;
+Is_Correct() checks whether the cube is valid;
+Is_Ready() checks whether the cube is done;
+Test() implements a variety of tests (26 currently) for a cube;
+
+Six different cube rotations;
+Twelve different sides rotations;
+Three types of positioning of a cube (Default is white center on the Top and green center on the Front);
+Some functions which allow to solve a cube by steps;
