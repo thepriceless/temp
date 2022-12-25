@@ -1,0 +1,50 @@
+Lambda=.633;        #Длина волны лазера (мкм)
+D=50;               #Диаметр отверствия (мем)
+Z_Meters=.1;        #Дистанция до экрана (м)
+Z=Z_Meters*10^6;    #Дистанция до экрана (мкм)
+
+MeshSpacing=1;      
+MeshSize=200;       #Размер экрана (мкм)
+
+#Расчёт амплитуды около отверстия.
+[XGrid,YGrid]=meshgrid((-MeshSize/2:MeshSpacing:MeshSize/2),(-MeshSize/2:MeshSpacing:MeshSize/2));
+R=sqrt(XGrid.^2+YGrid.^2);
+A=R<=D/2; 
+figure;imshow(A);title('Amplitude Across Aperture')
+
+#Двумерное преобразование Фурье
+U=fftshift(fft2(A));
+I=abs(U).^2;
+figure;imshow(I,[]);title('Intensity at Screen')
+figure;imshow(log(I),[]);title('Log Intensity at Screen')
+figure;plot(I(101,:));xlabel('Pixels');ylabel('I')
+
+
+SZ=size(A,1);
+FrequencySampling=1/(SZ*MeshSpacing); #units of 1/microns
+[FGridX,FGridY]=meshgrid((0:SZ-1),(0:SZ-1));
+FGridX_Shift=fftshift(FGridX);
+FGridX_Shift(FGridX_Shift>SZ/2)=FGridX_Shift(FGridX_Shift>SZ/2)-SZ;
+FGridY_Shift=fftshift(FGridY);
+FGridY_Shift(FGridY_Shift>SZ/2)=FGridY_Shift(FGridY_Shift>SZ/2)-SZ;
+
+FX=FGridX_Shift*FrequencySampling;
+FY=FGridY_Shift*FrequencySampling;
+X=FX*Lambda*Z;
+Y=FY*Lambda*Z;
+
+
+I_norm=I/max(I(:));
+X_center=X(101,:)+eps;
+figure
+plot(X_center,I_norm(101,:));xlabel('X (microns)');ylabel('I(X)')
+
+k=2*pi/Lambda;
+a=D/2;
+SinTheta=X_center./sqrt(X_center.^2+Z.^2);
+I_Airy=(besselj(1,k*a*SinTheta)./(k*a*SinTheta)).^2;
+I_Airy_norm=I_Airy/max(I_Airy(:));
+
+hold on
+plot(X_center,I_Airy_norm,'r--')
+legend('Fourier','Direct')
